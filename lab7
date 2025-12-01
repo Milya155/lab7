@@ -1,0 +1,21 @@
+def count_characters_basic(text: str) -> dict:
+    """
+    Возвращает словарь с частотой каждого символа в тексте.
+
+    Args:
+        text: Исходный текст для анализа
+
+    Returns:
+        Словарь, где ключи - символы, значения - количество их вхождений
+    """
+    frequency = {}
+
+    for char in text:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+
+    return frequency
+print(count_characters_basic("мама"))
+print(count_characters_basic("космос"))
